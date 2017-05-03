@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "8a24811d-68bd-456e-92a2-82b5ca380991",
+    "name": "Eudai",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "f9a08780-cf7e-4da0-a953-f5c095313876",
+    "name": "end_user_error",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]

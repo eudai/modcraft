@@ -1,0 +1,59 @@
+id: f9a08780-cf7e-4da0-a953-f5c095313876
+name: end_user_error
+last_cast: 1493099107938
+cooldown_expiration: 0
+last_death_location: -42.69999998807907,63.0,-128.69999998807907,world,-6.600441,-4.200028
+fall_protection_count: 0
+fall_protection: 0
+brush:
+  map_id: -1
+  material: dirt
+  data: 1
+  schematic: ''
+  scale: 1.0
+  erase: true
+undo: []
+spells:
+  missile:
+    cast_count: 12
+    last_cast: 1493099107967
+    last_earn: 1493097371124
+    cooldown_expiration: 1493099108967
+wands:
+  wand:
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      type: WOOD_HOE
+      damage: 1
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: §6Magic Missile§f (§3Wand§f)
+        lore:
+        - §o§aBeginner Magic Wand
+        - §3§oBound to end_user_error
+        - '§d§oMana: 50'
+        - '§d§oMana Regeneration: 5/s'
+        ItemFlags: !!set
+          HIDE_PLACED_ON: null
+          HIDE_ENCHANTS: null
+          HIDE_UNBREAKABLE: null
+          HIDE_POTION_EFFECTS: null
+          HIDE_ATTRIBUTES: null
+          HIDE_DESTROYS: null
+        Unbreakable: true
+        internal: H4sIAAAAAAAAAD2QwU7CQBCGh1CwEOWAR000kXiiprW0tBcjRhNMRA+Ek4dmu53VDWy3brdy9eIz+AB49OAD+Aw+kCdLDc5lJv8/mf/LtAHaYCxJmphgahTZgmjcCA25TFFBB9MkKnJUESolVQMMQVJyMQYwoLMeI80F5pqIDKB2v3o/mJuwjYwh1RGVC6ngGOOQDpjjDwijfc+3qe+dEo/FSd91Yt8NwgELYqdkqCIjnkCPhcQOhoFtUTZEa5AQ2yKh51rMo3bZHTcY+nXYekaVc5kCQANa0B1prXhcaJzIhDNemu3SqhlgzmbXlxOZ65+js/3RyxgNaK2lGyS5/tz7+n57/Vg1oTkSskj1eQ+qMsGYLqQGUxCePlZf2fmPuCUCYfcBS2JOT4jWhM6nGWJSh9ZdhoroP7D1lWq3e/VU8Exgqg83eAC/OGAUq4MBAAA=
+    wand:
+      template: wand
+      owner: end_user_error
+      mana: 50.0
+      mana_timestamp: 1493099093867
+      effect_color: eb9c4f164afc,560c652a5fbd,31b63894f8b1
+      owner_id: f9a08780-cf7e-4da0-a953-f5c095313876
+      version: 5
+open_wand: false
+gave_welcome_wand: false
+data:
+  sp: 33
+properties: {}
+classes: {}

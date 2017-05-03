@@ -1,0 +1,16 @@
+demo:
+  maxHealth: 200.0
+  spawnHealth: 200.0
+  rank: 0
+  dmg: 10.0
+  exp: 1000
+  ageName: '&aDemo&c'
+  isHostile: false
+  loot:
+    coolitem:
+      item:
+        data:
+          type: GRASS
+      min: 1
+      max: 64
+      probability: 0.5

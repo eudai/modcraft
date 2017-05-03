@@ -1,0 +1,256 @@
+#Config for Enderdragons+
+#TemplateVersion 2.4
+
+#	REGION: EnderDragons
+#The maximal Life an EnderDragon comes to Life
+#When set to -1, the Health will not be set (for compability to other plugins regulating health)
+#This can be a double (number with comma)
+#default: 200
+dragonMaxHealth: 200.0
+
+#The actual Life an EnderDragon comes to Life
+#This can be a double (number with comma)
+#default: 200
+dragonSpawnHealth: 200.0
+
+#Exp an EnderDragon will drop when he dies
+#default: 20000
+dropEXP: 200
+
+#Damage an EnderDragon does when attacking
+#This can be a double (number with comma)
+#default: 10
+dragonDamage: 10.0
+
+#Tells the EnderDragon at what distance to return to his home
+#default: 500
+maxHomeDistance: 500
+
+#If the dragon healthbar should be hidden (Not working Yet!!!)
+#default: false
+disableDragonHealthBar: false
+
+#If dragons have no targets they will sit down
+#default: false
+dragonsSitDownIfInactive: false
+
+#SUBREGION: EnderDragons.Fireballs
+#Defines if the dragon can spit FireBalls
+#default: true
+dragonsSpitFireballs: true
+
+#The time the enderdragon can spit Fireballs (every X seconds)
+#default: 7
+dragonsSpitFireballsEveryXSeconds: 7
+
+#The maximum distance the enderdragon can spit Fireballs
+#default: 100
+dragonsSpitFireballsRange: 100
+
+#when a Fireball explodes, damage to the World is prevented
+#default: true
+disableFireballWorldDamage: true
+
+#The damage a fireball does, when it hits an Entity
+#This can be a double (number with comma)
+#default: 4
+fireballEntityDamage: 4.0
+
+#The radius a Fireball will explode in
+#default: 8
+fireballExplosionRadius: 5
+
+#The maximum amount of Fireballs a Dragon can spit at once.
+#default: 2
+maxFireballTargets: 2
+
+#When a Fireball explodes, it sets all entities with a % chance on fire
+#default: 50
+fireballSetOnFireChance: 50
+
+#When a Fireball sets a Player on fire, it burns this time (in seconds)
+#default: 5
+fireballBurnTime: 5
+
+#Disables rebounce, when Fireball is hit by Something
+#default: false
+disableFireballRebounce: false
+
+#Varies the speedup of the fireballs. > 1 is faster, < 1 is slower
+#CAUTION!!! only vary by small values (like 1.05, 1.10, 0.95, ....)
+#If you vary to much it is impossible to evade!
+#default: 1.00
+fireBallSpeedUp: 1.0
+#  /SUBREGION: EnderDragons.Fireballs
+
+#SUBREGION: EnderDragons.Announcements
+#Defines if it is anounces publicaly if a dragon spawns
+#default: true
+anounceDragonSpawning: true
+
+#If Dragon Spawn announce is activated, this is the message.
+#Keywords: ~x~ is the X position. ~y~ is the y position.
+#~z~ is the z position. ~world~ is the world
+#~age~ is the age Name of the dragon#default: '&aA new ~age~ Dragon has spawned at: x: ~x~ y: ~y~ z: ~z~ on world: ~world~.'
+dragonSpawnMessage: '&aA new Dragon has spawned at: x: ~x~ y: ~y~ z: ~z~ on world: ~world~.'
+
+#Defines if it is anounces publicaly if a dragon dies
+#default: true
+anounceDragonKill: true
+
+#If Dragon death announce is activated, this is the message.
+#Keywords: ~player_kill~ = name of player who killed the dragon
+# ~player_kill_dmg~ = total damage done by the player killing the dragon
+# ~age~ the age name of the Dragon
+#default: '&aPlayer &b~player_kill~ &ahas killed a ~age~ dragon! (done &1~player_kill_dmg~ &adamage).'
+dragonKillMessage: '&aPlayer &b~player_kill~ &ahas killed a dragon! (done &1~player_kill_dmg~ &adamage)'
+
+#To which worlds the Dragon kill message should be announced.
+#Keywords: ~current~ = the current world of the dragon
+# ~all~ = all worlds
+# IMPORTANT!!!! The total String has to be in ' ' symbols or it will not load correct. (see example below)
+#example: 'world,~current~,gmworld'
+#default: '~all~'
+dragonKillMessageToWorlds: ~all~
+
+#	/SUBREGION: EnderDragons.Announcements
+#  SUBREGION: EnderDragons.Riding
+
+#If this is set to true, the Collision of a dragon (while riding) is only checked for 1 block where the dragon is moving to.
+#If set to false, the collosion is checked against the BoundingBox around the Dragon.
+#default: true'
+useSoftRidingCollision: true
+
+#This is the maximal Riding speed that can be passed to /edpRide <speed>
+#default: 4'
+maxRidingSpeed: 4
+
+#This is the item you have to hold for fireing Fireballs
+#default: ENDER_PEARL
+#fireItem1: ENDER_PEARL
+
+#This is the item you have to hold for fireing Firebreath
+#default: FIREBALL
+#fireItem2: FIREBALL
+
+#  /SUBREGION: EnderDragons.Riding
+
+#	/REGION: EnderDragons
+
+
+#REGION: WorldDamage
+#Disables the BlockDamage of an EnderDragon fly through them
+#default: true
+disableEnderdragonBlockDamage: true
+
+#Disables Explosion effect when dragon hits block
+#default: false 
+deactivateBlockExplodeEffect: false
+
+#Disables the Temple when an EnderDragon dies
+#default: true
+deactivateDragonTemples: true
+
+#This option is to replace the Dragon temple spawned at death. 
+#It only works with the Plugin: Worldedit. 
+#The Scematic has to be in plugins/EnderdragonsPlus/temples/ 
+# IMPORTANT!!!! The total String has to be in ' ' symbols or it will not load correct. (see default below)
+#default: 'STDTemple.schematic'
+dragonTempleFile: STDTemple.schematic
+#	/REGION: WorldDamage
+
+
+#	REGION: WorldHandling
+#replaces all other spawned Dragons with EnderDragons of this Plugin
+#NOTICE: It will never replace special Dragons (as in DragonTravel, RideThaDragon)
+#default: true
+replaceAllDragons: true
+
+#replaces all dragons On the fly when loaded.
+#This gets triggered for example when there are dragons active,
+#before the plugin is active
+replaceOnTheFly: true
+
+#if set to true the plugin will cancle all unloads of EnderDragons
+#default: false
+neverUnloadChunkWithED: false
+
+#The ticks an EnderDragon will do when out of player sight (0 = off)
+#default: 25
+ticksPerSecondWhenOutOfRange: 25
+
+#Tells the plugin to handle Dragon Loading and Unloading
+#NOTICE: If false, Dragons may disappear because of illigal Minecraft moveEvents
+#default: true
+pluginHandlesDragonLoads: true
+#	/REGION: WorldHandling
+
+
+#  REGION: Waypoints
+
+#This is from where to where the mesh is generated.
+#The generation is for each world on it's own. When a world is not present, it has no mesh.
+#The first argument is the World, the rest is from where to where.
+#World#FromX#ToX#FromZ#ToZ.
+#default: -'world#-2000#2000#-2000#2000''
+#meshGeneration:
+
+-'world#-2000#2000#-2000#2000'
+
+#  /REGION: Waypoints
+
+#	REGION: PlayerInteraction
+#SUBREGION: EnderDragons.Targeting
+#This value defines every x seconds the dragon searches a new Target.
+#If set to a very low value (exp: 0-20) the Dragon will always be around the player and not fly off again.
+#default: 60
+dragonUntargeting: 60
+
+#At which distance the EnderDragon should not target a player any more
+#default: 100
+maxPlayerFollowDistance: 100
+
+#if a Dragon should ignore player in Creative mode
+#default: true
+ignorePlayerGamemode1: true
+
+#Disables targeting imunity through Permission: 'edplus.targeting.ignore'
+#default: false
+disableTargetImun: false
+
+#if a Dragon should ONLY attack Players attacking him
+#or he attacks everyone in range. (true = everyone, false = only attackers)
+#default: false
+dragonsAreHostile: false
+
+#   /SUBREGION: EnderDragons.Targeting
+
+
+#Informes the Player how much damage he has done to an EnderDragon
+#default: true
+informPlayerDamageDone: true
+
+#Informes the Player how much damage he has gotten from an EnderDragon
+#default: true
+informPlayerDamageTaken: true
+#	/REGION: PlayerInteraction
+
+
+#	REGION: Debug&API layer
+#Gives Debug informations for Developers
+#NOTICE: If true, this will MASSIVLY spam your Minecraft Log!
+#default: false
+debugOutputs: false
+
+#If true it will fire Bukkit Events (as EntityChangeTarget)
+#default: false
+fireBukkitEvents: false
+
+#If true, the plugin will upload Stacktraces of errors to a database for easier debuging
+#default: false
+uploadErrors: false
+
+#If true, the plugin will upload Metrics to 'http://mcstats.org'
+#default: true
+uploadMetrics: true
+#	/REGION: Debug&API layer
