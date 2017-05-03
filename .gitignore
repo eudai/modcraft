@@ -10,3 +10,5 @@ world_nether
 world_the_end
 spigot*
 craftbukkit*
+*.log
+BuildTools.jar
